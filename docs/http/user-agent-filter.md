@@ -14,11 +14,13 @@ import RustSdkExample from "/examples/rust-sdk/http-user-agent-filter.mdx";
 
 ## Overview
 
-The User Agent Filter module allows or denies traffic based on the `User-Agent`
-header of incoming HTTP requests. The `User-Agent` header contains information
+The User Agent Filter module enables you to block bots, crawlers, or certain
+browsers from accessing your web application. It allows or denies traffic based
+on the `User-Agent` header of incoming HTTP requests.
+
+The `User-Agent` header contains information
 about the requesting browser or application, including its name, version, and
-operating system. This module is useful for blocking bots from crawling your
-app.
+operating system.
 
 You define a set of regular expression rules that either allow or deny HTTP
 requests if they match the `User-Agent` header.
