@@ -75,6 +75,36 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
+### NodeJS SDK
+
+See [allow_user_agent](https://ngrok.github.io/ngrok-nodejs/interfaces/Config.html#allow_user_agent) and [deny_user_agent](https://ngrok.github.io/ngrok-nodejs/interfaces/Config.html#deny_user_agent) in the NodeJS SDK docs.
+
+```jsx
+const ngrok = require("@ngrok/ngrok");
+(async function () {
+	const url = await ngrok.connect({
+		addr: 8080,
+		authtoken_from_env: true,
+		allow_user_agent: "foo/(d)+",
+		deny_user_agent: "bar/(d)+",
+	});
+	console.log(`Ingress established at: ${url}`);
+})();
+```
+
+### Python SDK
+
+See [allow_user_agent](https://ngrok.github.io/ngrok-python/http_listener_builder.html#ngrok.HttpListenerBuilder.allow_user_agent) and [deny_user_agent](https://ngrok.github.io/ngrok-python/http_listener_builder.html#ngrok.HttpListenerBuilder.deny_user_agent) in the Python SDK docs.
+
+```python
+import ngrok
+
+listener = ngrok.connect("localhost:8080", authtoken_from_env=True,
+  allow_user_agent="foo/(\d)+",
+  deny_user_agent="bar/(\d)+")
+print(f"Ingress established at: {listener.url()}");
+```
+
 ### Rust SDK
 
 Here is an example using the [ngrok-rust](https://github.com/ngrok/ngrok-rust) library
