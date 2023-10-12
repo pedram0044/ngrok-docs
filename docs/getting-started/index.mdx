@@ -1,5 +1,6 @@
 ---
 title: Quickstart
+pagination_next: http/index
 ---
 
 import Tabs from "@theme/Tabs";
@@ -120,11 +121,11 @@ ngrok http 8080 --domain jumpy-red-mollusk.ngrok-free.app
 
 You may not want everyone to be able to access your application. ngrok can
 quickly add authentication to your app without any changes. If your Google
-account is `alan@gmail.com`, you can restrict access only for yourself by
+account is `alan@example.com`, you can restrict access only for yourself by
 running ngrok with:
 
 ```
-ngrok http http://localhost:8080 --oauth=google --oauth-allow-email=alan@gmail.com
+ngrok http http://localhost:8080 --oauth=google --oauth-allow-email=alan@example.com
 ```
 
 Anyone accessing your app will be prompted to log in with Google and only your

@@ -35,8 +35,8 @@ import AtUpstreamRustSdkExample from "/examples/rust-sdk/tls-terminate-at-upstre
 
 ## Overview
 
-This module allows you to configure TLS termination at either you upstream
-service, the ngrok edge or the ngrok agent. It also allow you to configure the
+This module enables you to configure TLS termination at either your upstream
+service, the ngrok edge or the ngrok agent. It also allows you to configure the
 parameters of that termination.
 
 By default, TLS endpoints terminate TLS connections at your upstream service.
@@ -162,12 +162,12 @@ Because TLS endpoints are flexible enough to terminate TLS at either the ngrok
 edge, the ngrok agent or your upstream service, it is very common to encounter
 certificate errors. The following will help you resolve certificate errors.
 
-When you terminate TLS at the ngrok edge, you may choose between bring your own
-certificates and allowing ngrok to automatically provision certificates for you
-from an ACME provider like Let's Encrypt. If you use automatic certificates,
-ngrok will choose a matching, valid certificate you and it will provision and
-renew that cert for you, if necessary. This works even if you're listening on a
-randomly-chosen ngrok domain.
+When you terminate TLS at the ngrok edge, you may choose between bringing your
+own certificates and allowing ngrok to automatically provision certificates for
+you from an ACME provider like Let's Encrypt. If you use automatic
+certificates, ngrok will choose a matching, valid certificate for you and it
+will provision and renew that, if necessary. This works even if you're
+listening on a randomly-chosen ngrok domain.
 
 When using [Zero-Knowledge TLS](#zero-knowledge-tls) by terminating at the
 ngrok agent or at your upstream service, you should always specify a domain.

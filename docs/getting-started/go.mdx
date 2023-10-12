@@ -1,5 +1,6 @@
 ---
 title: Go
+pagination_next: http/index
 ---
 
 # Quickstart: ngrok-go
@@ -131,7 +132,7 @@ then update your `ngrok.Listen` function call to use it. Stop your app with
 You may not want everyone to be able to access your application. ngrok can
 quickly add authentication to your app with a few lines of code.
 
-If your Google account is `alan@gmail.com`, you can restrict access only for
+If your Google account is `alan@example.com`, you can restrict access only for
 yourself by modifying your `main.go` file to:
 
 ```go showLineNumbers
@@ -158,7 +159,7 @@ func run(ctx context.Context) error {
 		config.HTTPEndpoint(
 			// highlight-start
 			config.WithOAuth("google",
-				config.WithAllowOAuthEmail("alan@gmail.com"),
+				config.WithAllowOAuthEmail("alan@example.com"),
 			),
 			// highlight-end
 		),
@@ -185,7 +186,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 :::note In this code
 
 - **Line 22**: Require visitors to authenticate with Google before they access your application. You can [choose other providers](/http/oauth/#supported-providers).
-- **Line 23**: Only allow `alan@gmail.com` access to the application
+- **Line 23**: Only allow `alan@example.com` access to the application
 - **Line 39**: Print the authenticated user's email address from a request header. [See what headers are populated by the OAuth Module.](/http/oauth/#upstream-headers)
 
 :::

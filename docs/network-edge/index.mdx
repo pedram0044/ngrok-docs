@@ -1,5 +1,6 @@
 ---
 title: Overview
+pagination_next: network-edge/domains-and-tcp-addresses
 ---
 
 # Network Edge
@@ -40,17 +41,17 @@ without notice_**. There are no static IPs. If you hardcode any of ngrok's IPs
 or rely on DNS records past their TTL, your applications **_will break_**.
 There is no API to query ngrok's IPs at this time.
 
-When you use resolve any of ngrok's IPs via DNS, you will receive a partial
-list of IPs because ngrok uses [global server load
-balancing](/network-edge/gslb/), which means that DNS queries will return
-different sets of IPs depending on where you are located in the world.
+When you resolve any of ngrok's IPs via DNS, you will receive a partial list of
+IPs because ngrok uses [global server load balancing](/network-edge/gslb/),
+which means that DNS queries will return different sets of IPs depending on
+where you are located in the world.
 
 For the avoidance of doubt, this includes but is not limited to all IPs used by
 [Domains](/concepts/#domains), [TCP Addresses](/concepts/#tcp-addresses),
 [Agent Ingress](/agent/ingress/), the Dashboard and [API](/api/).
 
 Please [contact us](mailto:support@ngrok.com) if you need [dedicated static IPs
-for a custom agent ingress adress](/agent/ingress/#dedicated-ips).
+for a custom agent ingress address](/agent/ingress/#dedicated-ips).
 
 ## IPv6 Support
 
@@ -88,11 +89,11 @@ ngrok helps protect your service from distributed denial of service (DDoS)
 attacks. You can use the following measures with ngrok to protect your service
 from DDoS attacks:
 
-1. First, ngrok automatically applies a layer DDoS protection to all of your
+1. First, ngrok automatically applies a layer of DDoS protection to all of your
    endpoints without any configuration. Our software monitors all traffic flows
-   into ngrok's edge in real-time scanning for malicious sources, patterns and
-   threats in real-time. ngrok proactively blocks incoming connections when an
-   attack is detected.
+   into ngrok's edge by scanning for malicious sources, patterns and threats in
+   real-time. ngrok proactively blocks incoming connections when an attack is
+   detected.
 
 1. Second, you can prevent attacks by enforcing authentication with modules
    like [OAuth](/http/oauth), [OpenID Connect](/http/openid-connect),
