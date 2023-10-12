@@ -706,22 +706,22 @@ via an Agent or Agent SDK.
 
 Use modules to modify the behavior of traffic flowing through your endpoints.
 
-| Module                                       | Description                                                                                                               |
-| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [Basic Auth](basic-auth)                     | Require a username and password with HTTP Basic Auth.                                                                     |
-| [Circuit Breaker](circuit-breaker)           | Protect upstream services by rejecting traffic when they become overwhelmed.                                              |
-| [Compression](compression)                   | Accelerate upstream services by compressing HTTP response bodies with gzip or deflate.                                    |
-| [IP Restrictions](ip-restrictions)           | Allow or deny traffic based on the source IP of connections.                                                              |
-| [Mutual TLS](mutual-tls)                     | Enforce mutual TLS auth with a configured set of CAs.                                                                     |
-| [OAuth](oauth)                               | Enforce an OAuth flow to well-known IdPs like Google, optionally authorizing users by domain or email address.            |
-| [OpenID Connect](openid-connect)             | Enforce an OpenID Connect flow to a federated IdP.                                                                        |
-| [Request Headers](request-headers)           | Add or remove headers from HTTP requests before they are sent to your upstream service.                                   |
-| [Response Headers](response-headers)         | Add or remove headers from HTTP responses before they are returned to the client.                                         |
-| [SAML](saml)                                 | Enforce a SAML flow to a federated IdP, optionally authorizing users by group.                                            |
-| [TLS Termination](tls-termination)           | Customize TLS termination behavior, like the minimum supported version of TLS.                                            |
-| [User Agent Filter](user-agent-filter)       | Block bots or browsers with rules that allow or deny HTTP requests based on `User-Agent` header.                          |
-| [Webhook Verification](webhook-verification) | Restrict access by verifying HTTP requests are signed by a webhook provider like Slack or GitHub.                         |
-| [Websocket TCP Converter](websocket-tcp-converter) | Convert binary websocket connections to backend TCP connections.                                                    |
+| Module                                             | Description                                                                                                    |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [Basic Auth](basic-auth)                           | Require a username and password with HTTP Basic Auth.                                                          |
+| [Circuit Breaker](circuit-breaker)                 | Protect upstream services by rejecting traffic when they become overwhelmed.                                   |
+| [Compression](compression)                         | Accelerate upstream services by compressing HTTP response bodies with gzip or deflate.                         |
+| [IP Restrictions](ip-restrictions)                 | Allow or deny traffic based on the source IP of connections.                                                   |
+| [Mutual TLS](mutual-tls)                           | Enforce mutual TLS auth with a configured set of CAs.                                                          |
+| [OAuth](oauth)                                     | Enforce an OAuth flow to well-known IdPs like Google, optionally authorizing users by domain or email address. |
+| [OpenID Connect](openid-connect)                   | Enforce an OpenID Connect flow to a federated IdP.                                                             |
+| [Request Headers](request-headers)                 | Add or remove headers from HTTP requests before they are sent to your upstream service.                        |
+| [Response Headers](response-headers)               | Add or remove headers from HTTP responses before they are returned to the client.                              |
+| [SAML](saml)                                       | Enforce a SAML flow to a federated IdP, optionally authorizing users by group.                                 |
+| [TLS Termination](tls-termination)                 | Customize TLS termination behavior, like the minimum supported version of TLS.                                 |
+| [User Agent Filter](user-agent-filter)             | Block bots or browsers with rules that allow or deny HTTP requests based on `User-Agent` header.               |
+| [Webhook Verification](webhook-verification)       | Restrict access by verifying HTTP requests are signed by a webhook provider like Slack or GitHub.              |
+| [Websocket TCP Converter](websocket-tcp-converter) | Convert binary websocket connections to backend TCP connections.                                               |
 
 ### Observability
 
