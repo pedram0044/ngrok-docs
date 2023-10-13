@@ -46,12 +46,19 @@ const redirects = [
     // redirects for ngrok agent, redirect cli first
     [ fromIncludes(`/docs/secure-tunnels/ngrok-agent/reference/ngrok`), `/docs/agent/cli` ],
     [ fromIncludes(`/docs/secure-tunnels/ngrok-agent/reference/`), toReplace(`/docs/agent/`) ],
+
+    https://ngrok.com/docs/secure-tunnels/non-local/ -> /http/#forward-to-non-local
+    https://ngrok.com/docs/secure-tunnels/tunnels/ -> /agent/
+    https://ngrok.com/docs/secure-tunnels/ -> /agent/
+    https://ngrok.com/docs/cloud-edge/endpoints/ -> /http/
+    https://ngrok.com/docs/cloud-edge/ip-policies/ -> /http/#ip-restrictions (this is not great but it's probably okay)
+    https://ngrok.com/docs/cloud-edge/modules/ -> /http/#modules 
 ]
 
 // get current location from window
 const currentPath = window.location.pathname
 
-// setup empty variable to be filled when a match is found
+// set new path to current path
 let newPath = currentPath
 
 // iterate over each redirect, when a match is found, update newPath
@@ -78,6 +85,6 @@ for (const redirect of redirects) {
 }
 
 // redirect when the path has changed
-if (newPath) {
+if (newPath != currentPath) {
     window.location.href = `${window.location.origin}${newPath}`
 }
