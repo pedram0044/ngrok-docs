@@ -38,17 +38,17 @@ For additional detail on per-protocol Edge behavior, see:
 
 ## Modules
 
-Modules are middleware that enable you manipulate traffic to your applications.
-Modules enable to add authentication, resiliency, acceleration, transformation,
-security and observability to the traffic that transits through to your
+Modules are a type of middleware that enable you to manipulate traffic to your applications.
+Modules can provide authentication, resiliency, acceleration, transformation,
+security and observability to the traffic that transits through ngrok to your upstream
 applications.
 
 ## Backends
 
 After traffic to an Edge has been processed by the Modules, it is sent to a
-Backend. A Backend is also a Module, it is just the last Module to be handled
-which determines where the traffic is sent to. There are multiple types of
-backends, each with different behaviors.
+Backend. A Backend is the last middleware to be applied to your traffic
+and it determines where the traffic is sent. There are multiple types of
+Backends, each with different behaviors.
 
 ### Tunnel Group
 

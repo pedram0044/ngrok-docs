@@ -38,9 +38,8 @@ your app and not networking configurations.
 Don't build auth again. Or rate-limiting. Or other undifferentiated
 functionality. You can offload it to ngrok instead.
 
-ngrok's module system enables you to build less table-stakes functionality for
-your app and reuse it instead. Spend more time building your software instead
-of rebuilding the same scaffolding systems over and over again.
+ngrok's module system enables you to spend less time building table-stakes functionality
+and more time building new features for your app instead. You and your team won't need to rebuild the same scaffolding systems over and over again.
 
 ## Application-Layer Abstractions
 
@@ -70,7 +69,7 @@ This is a new, safer programming model where developers can safely offload
 additional functionality to the ingress platform without fear of the contract
 being broken.
 
-## Pay as you go
+## Pay as You Go
 
 Get started without a huge bill.
 
@@ -81,10 +80,10 @@ only for what you use.
 
 ## Dev / Prod Parity
 
-ngrok eliminates bugs from differences between local dev and production.
+ngrok eliminates bugs that arise from differences between local dev and production environments.
 
 We've all felt the pain of something failing in production that worked while we
-were testing in local. Because ngrok works everywhere, you can run it on your
+were testing it locally. Because ngrok works everywhere, you can run it on your
 local development environment exactly the same way you run it to deliver your
 production service.
 
@@ -106,7 +105,7 @@ ngrok puts developers in control with best-in-class developer tooling.
 - First-class CLI to all functionality
 - Native-language Agent SDKs
 - HTTP API to automate configuration tasks
-- Exhaustive documentation
+- Extensive documentation
 - Programmatic events for observability and automation
 
 ## Global Acceleration
@@ -123,10 +122,10 @@ your customers as possible.
 
 ngrok finally achieves true per-workload layer 4 networking security.
 
-Traditional networking architectures often permit application to speak to each
+Traditional networking architectures often permit applications to speak to each
 other directly when they're colocated on the same network without going through
 the ingress gateways which enforce auth and policy. This is ultimately the same
-security risk that motivated beyond-corp zero-trust architectures. ngrok
+security risk that motivated Google to create its BeyondCorp zero-trust architecture model. ngrok
 achieves true network isolation for applications without any complex networking
 policy so that the only way to access them is via their endpoint URL, even if
 they're running next to each other.
