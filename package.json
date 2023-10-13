@@ -8,7 +8,7 @@
     "docusaurus": "docusaurus",
     "fmt": "prettier --write --cache .",
     "fmt:check": "prettier --check .",
-    "start": "concurrently --raw \"npm run remark:watch\" \"docusaurus start\"",
+    "start": "docusaurus start",
     "build": "NODE_OPTIONS=--max-old-space-size=5120 docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
