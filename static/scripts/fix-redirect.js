@@ -52,7 +52,7 @@ const redirects = [
 const currentPath = window.location.pathname
 
 // setup empty variable to be filled when a match is found
-let newPath = null
+let newPath = currentPath
 
 // iterate over each redirect, when a match is found, update newPath
 // we do this until the list is finished letting us stack redirects:
@@ -71,9 +71,9 @@ for (const redirect of redirects) {
         toFn = toExact(toFn)
     }
 
-    const [from, fromResult] = fromFn(path)
+    const [from, fromResult] = fromFn(newPath)
     if (fromResult) {
-        newPath = toFn(path, from)
+        newPath = toFn(newPath, from)
     }
 }
 
